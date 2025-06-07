@@ -66,7 +66,6 @@ def main() -> None:
             command = input().strip()
 
             if command.startswith("push "):
-                # Разделение команды и аргумента
                 _, value = command.split()
                 print(stack.push(int(value)))
 
@@ -94,6 +93,10 @@ def main() -> None:
 
         except IndexError:
             print("Ошибка: стек пуст")
+
+        except KeyboardInterrupt:
+            print("\nПрограмма завершена вручную.")
+            break
 
         except Exception as e:
             print(f"Непредвиденная ошибка: {e}")
