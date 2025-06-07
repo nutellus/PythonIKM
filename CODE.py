@@ -4,7 +4,7 @@ class Stack:
     """
 
     def __init__(self):
-        self.__items = []  # внутреннее хранилище стека
+        self.__items = []  
 
     def _is_full(self) -> bool:
         """
